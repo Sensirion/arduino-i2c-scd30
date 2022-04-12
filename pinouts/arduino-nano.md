@@ -2,12 +2,10 @@
 
 | *SCD30* | *SCD30 Pin* | *Cable Color* | *Board Pin* |
 | :---: | --- | --- | --- |
-| VDD | 1 |  | 3.3V |
-| GND | 2 |  | GND |
-| SCL | 3 |  | A5 |
-| SDA | 4 |  | A4 |
-| RDY | 5 |  |  |
-| PWM | 6 |  |  |
+| VDD | 1 | red | 3.3V |
+| GND | 2 | black | GND |
+| SCL | 3 | yellow | A5 |
+| SDA | 4 | green | A4 |
 | SEL | 7 |  | GND |
 
 
