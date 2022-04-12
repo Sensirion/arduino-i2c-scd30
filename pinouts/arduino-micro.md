@@ -2,13 +2,11 @@
 
 | *SCD30* | *SCD30 Pin* | *Cable Color* | *Board Pin* |
 | :---: | --- | --- | --- |
-| VDD | 1 |  | 3.3V |
-| GND | 2 |  | GND |
-| SCL | 3 |  | ~D3/SCL |
-| SDA | 4 |  | D2/SDA |
-| RDY | 5 |  |  |
-| PWM | 6 |  |  |
-| SEL | 7 |  | GND |
+| VDD | 1 | red | 3.3V |
+| GND | 2 | black | GND |
+| SCL | 3 | yellow | ~D3/SCL |
+| SDA | 4 | green | D2/SDA |
+| SEL | 7 | blue | GND |
 
 
 <img src="Arduino-Micro-pinout.png" width="700px">
