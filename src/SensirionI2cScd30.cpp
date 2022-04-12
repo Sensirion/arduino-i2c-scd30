@@ -61,13 +61,13 @@ int16_t SensirionI2cScd30::awaitDataReady() {
 
 int16_t SensirionI2cScd30::blockingReadMeasurementData(float& co2Concentration,
                                                        float& temperature,
-                                                       float& humidiy) {
+                                                       float& humidity) {
     int16_t localError = 0;
     localError = awaitDataReady();
     if (localError != NO_ERROR) {
         return localError;
     }
-    localError = readMeasurementData(co2Concentration, temperature, humidiy);
+    localError = readMeasurementData(co2Concentration, temperature, humidity);
     return localError;
 }
 
@@ -162,7 +162,7 @@ int16_t SensirionI2cScd30::getDataReady(uint16_t& dataReadyFlag) {
 
 int16_t SensirionI2cScd30::readMeasurementData(float& co2Concentration,
                                                float& temperature,
-                                               float& humidiy) {
+                                               float& humidity) {
     int16_t localError = NO_ERROR;
     uint8_t local_buffer[18] = {0};
     SensirionI2CTxFrame txFrame = SensirionI2CTxFrame::createWithUInt16Command(
@@ -181,7 +181,7 @@ int16_t SensirionI2cScd30::readMeasurementData(float& co2Concentration,
     }
     localError |= rxFrame.getFloat(co2Concentration);
     localError |= rxFrame.getFloat(temperature);
-    localError |= rxFrame.getFloat(humidiy);
+    localError |= rxFrame.getFloat(humidity);
     return localError;
 }
 
