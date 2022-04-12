@@ -64,7 +64,7 @@ void setup() {
         Serial.println(errorMessage);
         return;
     }
-    Serial.print("major: ");
+    Serial.print("firmware version major: ");
     Serial.print(major);
     Serial.print("\t");
     Serial.print("minor: ");
@@ -83,10 +83,10 @@ void loop() {
 
     float co2Concentration = 0.0;
     float temperature = 0.0;
-    float humidiy = 0.0;
+    float humidity = 0.0;
     delay(1500);
     error = sensor.blockingReadMeasurementData(co2Concentration, temperature,
-                                               humidiy);
+                                               humidity);
     if (error != NO_ERROR) {
         Serial.print("Error trying to execute blockingReadMeasurementData(): ");
         errorToString(error, errorMessage, sizeof errorMessage);
@@ -99,7 +99,7 @@ void loop() {
     Serial.print("temperature: ");
     Serial.print(temperature);
     Serial.print("\t");
-    Serial.print("humidiy: ");
-    Serial.print(humidiy);
+    Serial.print("humidity: ");
+    Serial.print(humidity);
     Serial.println();
 }
