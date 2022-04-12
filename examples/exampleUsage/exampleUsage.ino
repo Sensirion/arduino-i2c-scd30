@@ -53,6 +53,7 @@ void setup() {
     Wire.begin();
     sensor.begin(Wire, SCD30_I2C_ADDR_61);
 
+    sensor.stopPeriodicMeasurement();
     sensor.softReset();
     delay(2000);
     uint8_t major = 0;
