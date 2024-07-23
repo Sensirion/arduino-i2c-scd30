@@ -4,8 +4,8 @@
 | :---: | --- | --- | --- |
 | VDD | 1 | red | 3.3V |
 | GND | 2 | black | GND |
-| SCL | 3 | yellow | D21/SCL |
-| SDA | 4 | green | D20/SDA |
+| SCL | 3 | yellow | GPIO22/SCL |
+| SDA | 4 | green | GPIO21/SDA |
 | SEL | 7 | blue | GND |
 
 
