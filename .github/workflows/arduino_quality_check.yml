@@ -1,10 +1,8 @@
 name: Quality check
 
 on:
-  pull_request:
-    branches:
-      - master
   push:
+  pull_request:
     branches:
       - master
 
@@ -14,3 +12,7 @@ jobs:
     with:
       expect-arduino-examples: true
       lint-lib-manager-check: update
+
+  code-generation-check:
+    uses: sensirion/.github/.github/workflows/driver.generated.metadata_check.yml@main
+  
