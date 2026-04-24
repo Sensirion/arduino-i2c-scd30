@@ -183,9 +183,9 @@ You will find pinout schematics for recommended board models below:
 
 
 
-5. Click the `Upload` button in the Arduino IDE or `Sketch` ➔ `Upload`
+4. Click the `Upload` button in the Arduino IDE or `Sketch` ➔ `Upload`
 
-4. When the upload process has finished, open the `Serial Monitor` or `Serial
+5. When the upload process has finished, open the `Serial Monitor` or `Serial
    Plotter` via the `Tools` menu to observe the measurement values. Note that
    the `Baud Rate` in the used tool has to be set to `115200 baud`.
 
