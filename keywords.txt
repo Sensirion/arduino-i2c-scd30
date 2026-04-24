@@ -30,6 +30,7 @@ getAltitudeCompensation	KEYWORD2
 setAltitudeCompensation	KEYWORD2
 readFirmwareVersion	KEYWORD2
 softReset	KEYWORD2
+readSerialNumber	KEYWORD2
 
 #######################################
 # Instances (KEYWORD2)
