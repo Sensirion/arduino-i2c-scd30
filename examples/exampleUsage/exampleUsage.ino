@@ -3,7 +3,7 @@
  *
  * Generator:     sensirion-driver-generator 1.6.1
  * Product:       scd30
- * Model-Version: 1.1.0
+ * Model-Version: 1.1.1
  */
 /*
  * Copyright (c) 2026, Sensirion AG
@@ -63,6 +63,18 @@ void setup() {
     sensor.stopPeriodicMeasurement();
     sensor.softReset();
     delay(2000);
+    int8_t serialNumber[32] = {0};
+
+    error = sensor.readSerialNumber(serialNumber, 32);
+    if (error != NO_ERROR) {
+        Serial.print("Error trying to execute readSerialNumber(): ");
+        errorToString(error, errorMessage, sizeof errorMessage);
+        Serial.println(errorMessage);
+        return;
+    }
+    Serial.print("serialNumber: ");
+    Serial.print((const char*)serialNumber);
+    Serial.println();
     uint8_t major = 0;
     uint8_t minor = 0;
 
