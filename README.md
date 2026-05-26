@@ -208,6 +208,14 @@ Note that differences from this formatting will result in a failed build until
 they are fixed.
 :
 
+## Known issues
+
+* *softReset()*:
+   After using the ``softReset()`` function on an Arduino MKR WIFI 1010, subsequent commands are no longer acknowledged.
+   The I2C line remains low after receiving the first command byte.
+
+   To make the provided example work on the Arduino MKR WIFI 1010, the call to ``softReset()`` and the subsequent ``delay()`` can be removed.
+
 ## License
 
 See [LICENSE](LICENSE).
